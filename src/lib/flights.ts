@@ -11,7 +11,7 @@ export interface Flight {
   delay: number;
 }
 
-const AIRLINES = [["AI", "Air India"], ["6E", "IndiGo"], ["EK", "Emirates"], ["BA", "British Airways"], ["SQ", "Singapore Airlines"], ["LH", "Lufthansa"], ["QR", "Qatar Airways"], ["UK", "Vistara"]];
+const AIRLINES: [string, string][] = [["AI", "Air India"], ["6E", "IndiGo"], ["EK", "Emirates"], ["BA", "British Airways"], ["SQ", "Singapore Airlines"], ["LH", "Lufthansa"], ["QR", "Qatar Airways"], ["UK", "Vistara"]];
 const CITIES = ["London", "Dubai", "Singapore", "Mumbai", "Bengaluru", "Frankfurt", "Doha", "New York", "Tokyo", "Paris", "Chennai", "Kolkata", "Sydney", "Hong Kong"];
 const pick = <T,>(a: T[]): T => a[Math.floor(Math.random() * a.length)] as T;
 
