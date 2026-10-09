@@ -13,7 +13,7 @@ export interface Flight {
 
 const AIRLINES = [["AI", "Air India"], ["6E", "IndiGo"], ["EK", "Emirates"], ["BA", "British Airways"], ["SQ", "Singapore Airlines"], ["LH", "Lufthansa"], ["QR", "Qatar Airways"], ["UK", "Vistara"]];
 const CITIES = ["London", "Dubai", "Singapore", "Mumbai", "Bengaluru", "Frankfurt", "Doha", "New York", "Tokyo", "Paris", "Chennai", "Kolkata", "Sydney", "Hong Kong"];
-const pick = <T,>(a: T[]) => a[Math.floor(Math.random() * a.length)];
+const pick = <T,>(a: T[]): T => a[Math.floor(Math.random() * a.length)] as T;
 
 export function makeFlight(type: "arr" | "dep", offsetMin: number): Flight {
   const [c, airline] = pick(AIRLINES);
